@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  nodejs_server_url: 'http://localhost:8888'
+  NODE_SERVER_URL: 'http://localhost:8888',
+  ACCESS_TOKEN: 'access_token',
+
+  // SPOTIFY URL
+  SPOTIFY_ME_URL: 'https://api.spotify.com/v1/me'
 };
 
 /*
