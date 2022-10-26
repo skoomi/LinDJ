@@ -1,6 +1,9 @@
 <mat-toolbar color="primary" [ngStyle]="{'margin-bottom': '20px'}">
     <mat-toolbar-row>
-      <a mat-flat-button color="primary" href="{{login_url}}" >Login with Spotify</a>
+      <span *ngIf="isLogged; else elseBlock" class="top-bar-login-text">Logged as {{displayName}}</span>
+      <ng-template #elseBlock>
+        <a class="top-bar-login-text" mat-flat-button color="primary" href="{{login_url}}" >Login with Spotify</a>
+      </ng-template>
       <!-- <span class="example-spacer"></span>
       <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
       <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon> -->

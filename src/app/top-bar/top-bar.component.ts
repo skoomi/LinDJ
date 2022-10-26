@@ -9,8 +9,14 @@ import { AuthService } from '../services/auth.service';
 })
 export class TopBarComponent {
 
-  login_url: string = environment.NODE_SERVER_URL + "/login";
-
-  constructor() { }
+  login_url: string = environment.NODE_SERVER_URL + '/login';
+  displayName: string = '';
+  isLogged: boolean = false;
+  constructor(private auth: AuthService) {
+    auth.getUser().subscribe(user => {
+      this.displayName = user.display_name;
+      this.isLogged = true;
+    })
+  }
 
 }
