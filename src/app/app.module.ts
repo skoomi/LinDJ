@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 // MATERIAL
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,10 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
 
     // MATERIAL
+    MatSidenavModule,
     MatToolbarModule,
     MatButtonModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
